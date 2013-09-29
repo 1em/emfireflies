@@ -40,7 +40,7 @@ body {
   background-color: black;
 }
 /* Design for All Firefly Elements */
-firefly {
+.firefly {
   -webkit-animation-name: fireflies;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-delay: 1s;
@@ -61,14 +61,14 @@ firefly {
   pointer-events: none; /* make click-through-able */
 }
 
-firefly:nth-child(1n) { top: 4%; left: 4%; }
-firefly:nth-child(2n) { top: 4%; left: 96%; }
-firefly:nth-child(3n) { top: 96%; left: 96%; }
-firefly:nth-child(4n) { top: 96%; left: 4%; }
+.firefly:nth-child(1n) { top: 4%; left: 4%; }
+.firefly:nth-child(2n) { top: 4%; left: 96%; }
+.firefly:nth-child(3n) { top: 96%; left: 96%; }
+.firefly:nth-child(4n) { top: 96%; left: 4%; }
 
 {% for i in range(1,total_fireflies) %}
-firefly:nth-child({{ i }}) { 
-  -webkit-animation-duration: {{ range(31,255)|random() }}s;
+.firefly:nth-child({{ i }}) { 
+  -webkit-animation-duration: {{ range(31,71)|random() }}s;
   -webkit-animation-delay: {{ range(255)|random() }}s;
 }
 {% endfor %}
@@ -76,4 +76,4 @@ firefly:nth-child({{ i }}) {
 }
 </style>
 {% for i in range(1,total_fireflies) %}
-<firefly></firefly>{% endfor %}
+<div class="firefly"></div>{% endfor %}
