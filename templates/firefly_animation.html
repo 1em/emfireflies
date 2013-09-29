@@ -1,0 +1,79 @@
+<style type="text/css">
+  body {
+background-image: -webkit-radial-gradient(circle, rgb(0,0,0), rgb(10,10,30));  
+  }
+
+@-webkit-keyframes fireflies {
+  
+from { opacity: 0; }
+
+4%, 6% { opacity: 0; -webkit-transform: scale(0.4); }
+5% { opacity: 1; -webkit-transform: scale(1.2); }
+
+9%, 11% { opacity: 0; }
+10% { opacity: 1; }
+
+19%, 22% { opacity: 0; -webkit-transform: scale(0.4); }
+20% { opacity: 1; -webkit-transform: scale(1.8); }
+
+39%, 41% { opacity: 0; -webkit-transform: scale(0.4); }
+40% { opacity: 1; -webkit-transform: scale(1.5); }
+
+50% { left: 50%; top: 50%; }
+
+59%, 61% { opacity: 0; }
+60% { opacity: 1; }
+
+69%, 71% { opacity: 0; left: 53%; top: 53%; }
+70% { opacity: 1; left: 54%; top: 54%; }
+
+79, 81% { opacity: 0; -webkit-transform: scale(0.4); }
+80% { opacity: 1; -webkit-transform: scale(1); }
+
+90% { left: 58%; top: 58%; }
+
+to { opacity: 0; }
+
+} /* end keyframes */
+
+body {
+  background-color: black;
+}
+/* Design for All Firefly Elements */
+firefly {
+  -webkit-animation-name: fireflies;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 41s; /* a default duration */
+  top: 4%; /* a default location, top */
+  left: 4%; /* a default location, left */
+  position: fixed;
+  opacity: 0;
+  z-index: 100;
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: {{ color }};
+  box-shadow:
+  0px 0px 4px {{ color }},
+  0px 0px 6px {{ color }},
+  0px 0px 12px {{ color }};
+  pointer-events: none; /* make click-through-able */
+}
+
+firefly:nth-child(1n) { top: 4%; left: 4%; }
+firefly:nth-child(2n) { top: 4%; left: 96%; }
+firefly:nth-child(3n) { top: 96%; left: 96%; }
+firefly:nth-child(4n) { top: 96%; left: 4%; }
+
+{% for i in range(1,total_fireflies) %}
+firefly:nth-child({{ i }}) { 
+  -webkit-animation-duration: {{ range(31,255)|random() }}s;
+  -webkit-animation-delay: {{ range(255)|random() }}s;
+}
+{% endfor %}
+
+}
+</style>
+{% for i in range(1,total_fireflies) %}
+<firefly></firefly>{% endfor %}

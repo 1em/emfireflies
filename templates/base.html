@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome</title>
+    <!-- meta for desktop and mobile browsing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename="css/emtoggle.css") }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename="css/base.css") }}">
+  </head>
+  <body>
+    <div id="readme" data-emtoggle data-emlink="readme">Read Me</div>
+    <div id="info" data-emlink="readme">
+      <p>Fireflies in Flask can be downloaded from Github 
+      <a href="https://github.com/1em/firefliesinflask">here</a></p>
+      <p>It was built using Flask, written in Python</p>
+      <p>It currently works well in Chrome</p>
+      <p>The number and color of the fireflies are random on page load</p>
+      <p>The most common color is yellow, the rarest are in the blue spectrum</p>
+  </div>
+
+    <div id="content">
+      {% block content %}
+      {% endblock content %}
+    </div>
+  </body>
+  <script type=text/javascript src="{{ url_for('static', filename="js/emtoggle.js") }}"></script>
+</html>

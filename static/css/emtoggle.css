@@ -1,0 +1,4 @@
+/* This selects all data-visible="false" elements EXCEPT the data-class-toggle ones */
+[data-emvisible="false"]:not([data-emtoggle]) {
+    display: none;
+}

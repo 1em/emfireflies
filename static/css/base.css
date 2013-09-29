@@ -1,0 +1,35 @@
+body {
+    background-color: white;
+    color: gray;
+    font-size: 110%;
+    letter-spacing: 0.2em;
+    line-height: 130%;
+    font-family: 
+        "Helvetica Neue Light", 
+        "Helvetica Neue", 
+        "Helvetica", 
+        "Arial", 
+        "Lucida Grande", 
+        sans-serif;
+    font-weight: 500;
+}
+
+a {
+  color: rgb(100, 100, 150);
+}
+
+#readme {
+  color: rgb(50,50,50);
+  margin-bottom: 12px;
+}
+
+#info {
+  color: rgb(100, 100, 100);
+  padding: 1em;
+  border-radius: 24px;
+  max-width: 40em;
+  margin: auto;
+  box-shadow: 
+    0px 0px 24px rgb(100,100,100),
+    inset 0px 0px 24px rgb(100,100,100);
+}
