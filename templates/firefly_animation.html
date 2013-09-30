@@ -6,8 +6,8 @@ rgb(10,10,20));
 
 @-webkit-keyframes fireflies {
   
-0% { opacity: 0; z-index: 6;  }
-
+0% { opacity: 0; }
+ 
 4%, 6% { opacity: 1; -webkit-transform: scale(0.4); }
 5% { opacity: 0; -webkit-transform: scale(1.2); }
 
@@ -15,20 +15,20 @@ rgb(10,10,20));
 10% { opacity: 1; }
 
 19%, 22% { opacity: 1; -webkit-transform: scale(1); }
-20% { opacity: 0; -webkit-transform: scale(1.8); z-index: 2; }
+20% { opacity: 0; -webkit-transform: scale(1.8); }
 
 39%, 41% { opacity: 0; -webkit-transform: scale(0.4); }
-40% { opacity: 1; -webkit-transform: scale(1.5); z-index: 3;}
+40% { opacity: 1; -webkit-transform: scale(1.5); }
 
-50% { left: 50%; top: 50%; z-index: 6; }
+50% { left: 50%; top: 50%; }
 
 59%, 61% { opacity: 0; }
-60% { opacity: 1; z-index: 2;}
+60% { opacity: 1; }
 
 69%, 71% { opacity: 0; left: 53%; top: 53%; }
 70% { opacity: 1; left: 54%; top: 54%; }
 
-79, 81% { opacity: 0; -webkit-transform: scale(0.4); z-index: 3;}
+79, 81% { opacity: 0; -webkit-transform: scale(0.4); }
 80% { opacity: 1; -webkit-transform: scale(1); }
 
 89%, 91% { opacity: 0; -webkit-transform: scale(1); }
@@ -72,7 +72,7 @@ body {
 .firefly:nth-child({{ i }}) { 
   top: {{ range(4,96)|random() }}%;
   left: {{ range(4, 96)|random() }}%;
-  z-index: {{ range(1, 21)|random() }};
+  z-index: {{ range(1, 12)|random() }};
   -webkit-animation-duration: {{ range(31,71)|random() }}s;
   -webkit-animation-delay: {{ range(18)|random() }}s;
 }
