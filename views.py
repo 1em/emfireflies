@@ -8,7 +8,7 @@ app.config.from_pyfile('settings.py')
 
 @app.route("/")
 def home():
-    total_fireflies = randint(11, 31)
+    total_fireflies = randint(13, 21)
     color_seed = randint(1, 255)
     if color_seed % 42 == 0:
         color = "rgb(143, 100, 255)"  # light violet
