@@ -68,7 +68,7 @@ body {
 .firefly:nth-child(odd) { -webkit-animation-direction: alternate-reverse; }
 .firefly:nth-child(even) { -webkit-animation-direction: alernate; }
 
-{% for i in range(1,21) %}
+{% for i in range(1,13) %}
 .firefly:nth-child({{ i }}) { 
   top: {{ range(4,96)|random() }}%;
   left: {{ range(4, 96)|random() }}%;
@@ -80,5 +80,5 @@ body {
 
 }
 </style>
-{% for i in range(1,21) %}
+{% for i in range(1,13) %}
 <div class="firefly"></div>{% endfor %}
