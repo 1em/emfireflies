@@ -8,15 +8,10 @@
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename="css/base.css") }}">
   </head>
   <body>
-    <div id="readme" data-emtoggle data-emlink="readme">Read Me</div>
-    <div id="info" data-emlink="readme">
-      <p>This code can be downloaded from Github 
-      <a href="https://github.com/1em/firefliesinflask">here</a></p>
-      <p>It was built using Flask, written in Python</p>
-      <p>It currently works well in Chrome and some Safari versions</p>
-      <p>The number and color of the fireflies are random on page load</p>
-      <p>The most common color is yellow, the rarest are in the blue spectrum</p>
+    <div id="info">
+  Get code at Github <a href="https://github.com/1em/emfireflies">here</a>
   </div>
+
 
     <div id="content">
       {% block content %}
