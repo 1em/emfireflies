@@ -27,7 +27,10 @@ body_overlay {
 @-webkit-keyframes fireflies {
   
 0% { opacity: 0; }
- 
+
+1%, 3% { opacity: 1; -webkit-transform: scale(1.2); }
+2% { opacity: 0; -webkit-transform: scale(0.6); }
+
 4%, 6% { opacity: 0; -webkit-transform: scale(0.4); }
 5% { opacity: 1; -webkit-transform: scale(1.2); }
 
@@ -91,7 +94,7 @@ body {
 .firefly:nth-child(odd) { -webkit-animation-direction: alternate-reverse; }
 .firefly:nth-child(even) { -webkit-animation-direction: alernate; }
 
-{% for i in range(1,8) %}
+{% for i in range(1,13) %}
 .firefly:nth-child({{ i }}) { 
   top: {{ range(4,96)|random() }}%;
   left: {{ range(4, 96)|random() }}%;
@@ -109,5 +112,5 @@ Your browser does not support this audio element.
 </audio>
 
 <body_overlay></body_overlay>
-{% for i in range(1,8) %}
+{% for i in range(1,13) %}
 <div class="firefly"></div>{% endfor %}
