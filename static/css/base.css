@@ -17,14 +17,14 @@ a {
 
 #readme {
   position: relative;
-  z-index: 5;
+  z-index: 100;
   color: rgb(50,50,50);
   margin-bottom: 12px;
 }
 
 #info {
   position: relative;
-  z-index: 5;
+  z-index: 100;
   color: rgb(100, 100, 100);
   padding: 1em;
   border-radius: 24px;
