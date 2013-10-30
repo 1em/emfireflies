@@ -6,7 +6,11 @@ Install requirements with:
 ```
 (If you don't have pip installed, you can look up directions for that online.)
 
+I use Heroku for testing, so either follow the instructions below, or lookup
+running a flask server through another method.
+
 Install Heroku Toolbelt at toolbelt.heroku.com.
+
 This will allow you to use the foreman command to start the server.
 
 Run your server with:
